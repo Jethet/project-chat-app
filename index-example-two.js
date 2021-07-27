@@ -19,7 +19,7 @@ const replies = [
 //  GET THE DOM ELEMENTS
 var chat = document.getElementById("chat");
 var messageInput = document.getElementById("message-input");
-var sendButton = document.getElementById("message-send-btn-img");
+var sendButton = document.getElementById("message-send-img");
 
 // HELPER FUNCTIONS
 function sendMessage() {
@@ -52,7 +52,7 @@ function displayMessage(message, sender) {
   messageContent.appendChild(contentText);
 
   // ADD SRC ATTRIBUTE TO THE IMAGE TAG
-  messageAvatar.setAttribute("src", "./images/ironhack.png");
+  messageAvatar.setAttribute("src", "./images/CW_logo.png");
 
   // APPEND TEXT ELEMENTS TO THE DIV
   newMessage.append(messageAvatar, messageAuthor, messageContent);

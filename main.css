@@ -74,7 +74,7 @@ main {
   padding: 60px 10px 0px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll ;
+  overflow-y: scroll;
 }
 
 /*** INPUT BAR ***/
@@ -115,12 +115,12 @@ main {
   line-height: 16px;
   box-shadow: 0 2px 3px #b0b6bb, 0 5px 5px rgba(0, 0, 0, 0.1);
   background: #fdf4eb; /* light orange */
-  
 }
 
 .align-right {
-background: #EAF3F8; /* light blue */
-align-self: flex-end;
+  padding: 12px 12px 18px 52px;
+  background: #eaf3f8; /* light blue */
+  align-self: flex-end;
 }
 
 .headline {
@@ -128,10 +128,17 @@ align-self: flex-end;
   font-size: 12px;
 }
 
-.avatar {
-  width: 35px;
+.cw-avatar {
+  width: 65px;
   float: left;
   margin-left: -45px;
+  margin-right: 10px;
+}
+
+.dev-avatar {
+  width: 85px;
+  float: left;
+  margin-left: -55px;
 }
 
 .message p {
