@@ -1,7 +1,7 @@
 // ARRAY WITH CHATBOT REPLIES (STRINGS)
 const replies = [
-  "Hello, Welcome to IronChat!",
-  "Ironhack's coding LAB a day keeps the bugs away!",
+  "Hello, Welcome to your personal Chat App!",
+  "Some coding a day keeps the bugs away!",
   "Thank you for your visit. See you soon!",
   "Goodbye!",
   "Nooo way! Same here!!!",
@@ -12,6 +12,9 @@ const replies = [
   "It does make sense.",
   "Why is that?",
   "Who?",
+  "That's great!",
+  "Whatever you say",
+  "I'd like to hear more about that"
 ];
 
 // GET THE DOM ELEMENTS
