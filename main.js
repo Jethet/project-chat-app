@@ -41,6 +41,7 @@ function randomReply() {
 
 function sendChat() {
   console.log("Sent", externalInput.value);
+
   let sender;
   const chatTemplate = document.createElement("div");
 
@@ -70,3 +71,11 @@ function sendChat() {
 }
 
 sendButton.addEventListener("click", sendChat());
+
+externalInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    sendChat();
+  }
+
+// clear text in input field
+document.querySelector("#external-message").innerHTML = ""
