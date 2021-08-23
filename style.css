@@ -36,8 +36,6 @@ body {
   font-weight: bold;
 }
 
-
-
 .sender {
   display: flex;
   /* border: 1px solid blue; */
@@ -104,4 +102,8 @@ body {
   display: flex;
   width: 75%;
   height: auto;
+}
+
+.send-btn:hover {
+  background-color: rgb(94, 190, 158);
 }

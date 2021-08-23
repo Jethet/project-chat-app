@@ -1,6 +1,4 @@
-// Hard-coded replies to be used in the chat app (add your own, if you like)
-
-const replies = [
+let replies = [
   "Hello, Welcome to your personal Chat App!",
   "Some coding a day keeps the bugs away!",
   "Thank you for your visit. See you soon!",
