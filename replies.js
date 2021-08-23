@@ -18,3 +18,5 @@ const replies = [
   "I'd like to hear more about that",
   "Mm-mm, so what are you saying?"
 ];
+
+export default replies
