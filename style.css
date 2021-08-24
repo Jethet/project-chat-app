@@ -12,7 +12,7 @@ body {
 .welcome-message {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 45%;
   margin: 15px;
   border: 2px solid aquamarine;
   border-radius: 10px;
@@ -57,8 +57,8 @@ body {
 .left-message {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin: 15px;
+  width: 45%;
+  margin-left: 15px;
   border: 2px solid aquamarine;
   border-radius: 10px;
   /* border: 1px solid red; */
@@ -67,37 +67,34 @@ body {
 .right-message {
   display: flex;
   justify-content: flex-end;
+  margin-right: 15px;
 }
 
 .message-content {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin: 15px;
+  width: 45%;
   border: 2px solid rgb(5, 226, 241);
   border-radius: 10px;
-  /* justify-content: flex-end; */
-  /* border: 1px solid red; */
 }
 
 /* FOOTER */
 .footer {
+  margin-top: 10px;
   bottom: 10px;
+  position: inherit;
+  /* bottom: 0; */
 }
 
 .message-input {
   display: flex;
   flex-direction: row;
   width: 100vw;
-  margin-top: 70px;
-  margin-bottom: 15px;
-  /* position: fixed;
-  bottom: 0; */
 }
 
 #external-input {
   width: 100%;
-  min-height: 45px;
+  min-height: 35px;
   margin-left: 15px;
   margin-right: 5px;
   padding: 5px;
