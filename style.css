@@ -9,23 +9,12 @@ body {
   justify-content: center;
 }
 
-.left-message {
-  display: flex;
-  /* border: 1px solid red; */
-}
-
-.right-message {
-  display: flex;
-  justify-content: flex-end;
-  /* border: 1px solid red; */
-}
-
 .welcome-message {
   display: flex;
   flex-direction: column;
   width: 40%;
   margin: 15px;
-  border: 1px solid aquamarine;
+  border: 2px solid aquamarine;
   border-radius: 10px;
 }
 
@@ -53,27 +42,50 @@ body {
   /* border: 1px solid green; */
 }
 
-.next-message {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin: 15px;
-  border: 1px solid aquamarine;
-  border-radius: 10px;
-}
-
 .welcome-text {
   padding: 5px;
   margin-left: 5px;
   font-style: italic;
 }
 
+.message-text {
+  padding: 5px;
+  margin-left: 5px;
+  font-style: italic;
+}
+
+.left-message {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 15px;
+  border: 2px solid aquamarine;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+
+.right-message {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 15px;
+  border: 2px solid rgb(5, 226, 241);
+  border-radius: 10px;
+  /* justify-content: flex-end; */
+  /* border: 1px solid red; */
+}
 
 /* FOOTER */
 .message-input {
   display: flex;
   flex-direction: row;
   margin-top: 100px;
+  margin-bottom: 15px;
 }
 
 #external-input {

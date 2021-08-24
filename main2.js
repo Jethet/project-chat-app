@@ -36,58 +36,58 @@ const chatTemplate = document.createElement("div");
 const chatBody = document.querySelector(".chat-body");
 let sender;
 
-function randomReply() {
+function randomMessage() {
   sender = "CodeWomen";
   const randomIndex = Math.floor(Math.random() * replies.length);
   const randomMessage = replies[randomIndex];
-  if (randomMessage) {
+  sendChat(randomMessage, "CodeWomen");
+}
+
+function externalMessage() {
+  let externalChat = externalInput.value;
+  sender = "WomanDev";
+  sendChat(externalChat, "WomanDev");
+  // clear text in input field
+  externalInput.value = "";
+}
+
+function sendChat(message, sender) {
+  console.log("Sent", message);
+
+  if (message && sender === "WomenDev") {
+    chatTemplate.innerHTML = `
+    <div class="right-message">
+      <div class="sender">
+        <img class="dev-logo" src="./images/woman_dev.png" alt="WomenDev">
+        <p class="sender-name">WomanDev</p>
+      </div>
+      <div class="message-text">${message}</div>
+    </div>`;
+  } else if (sender === "CodeWomen") {
+    console.log(randomMessage);
+
     chatTemplate.innerHTML = `
     <div class="left-message">
       <div class="sender">
         <img class="cw-logo" src="./images/codeWomen.png" alt="CodeWomen">
         <p class="sender-name">CodeWomen</p>
       </div>
-      <div class="message-text">${randomMessage}</div>
+      <div class="message-text">${message}</div>
   </div>`;
-    const newMessage = chatTemplate.children[0];
-    chatBody.append(newMessage);
+
+    setTimeout(randomMessage, 4000);
   }
-}
 
-let chatTimeout = setTimeout(randomReply(), 4000);
-
-
-function sendChat() {
-  console.log("Sent", externalInput.value);
-  if (externalInput) {
-    sender = "WomenDev";
-    chatTemplate.innerHTML = `
-    <div class="right-message">
-      <div class="message-content">
-      <div class="sender">
-        <img class="dev-logo" src="./images/woman_dev.png" alt="WomenDev">
-        <p class="sender-name">WomanDev</p>
-      </div>
-      <div class="message-text">${externalInput.value}</div>
-      </div>
-    </div>`;
-
-    const newMessage = chatTemplate.children[0];
-    chatBody.append(newMessage);
-
-    // clear text in input field
-    externalInput.value = ""
-  }
+  const newMessage = chatTemplate.children[0];
+  chatBody.append(newMessage);
 }
 
 sendButton.addEventListener("click", function () {
   sendChat();
-  console.log("WHAT");
 });
 
-// externalInput.addEventListener("keypress", function (event) {
-//   if (event.key === "Enter") {
-//     sendChat();
-//   }
-//   setTimeout(randomReply(), 2000);
-// });
+externalInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    sendChat();
+  }
+});
