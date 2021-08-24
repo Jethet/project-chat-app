@@ -51,10 +51,9 @@ function randomReply() {
   </div>`;
     const newMessage = chatTemplate.children[0];
     chatBody.append(newMessage);
+    // chatBody.scrollTop = chatBody.scrollHeight;
   }
 }
-
-let chatTimeout = setTimeout(randomReply(), 4000);
 
 
 function sendChat() {
@@ -74,20 +73,30 @@ function sendChat() {
 
     const newMessage = chatTemplate.children[0];
     chatBody.append(newMessage);
+    // chatBody.scrollTop = chatBody.scrollHeight;
 
     // clear text in input field
     externalInput.value = ""
   }
+  // the random reply comes after 3 seconds, to imitate that someone is writing
+  setTimeout(randomReply, 3000);
 }
+
+// function showChatTyping() {
+//   if (i < txt.length) {
+//     document.getElementById("demo").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(showChatTyping, speed);
+//   }
+// }
 
 sendButton.addEventListener("click", function () {
   sendChat();
   console.log("WHAT");
 });
 
-// externalInput.addEventListener("keypress", function (event) {
-//   if (event.key === "Enter") {
-//     sendChat();
-//   }
-//   setTimeout(randomReply(), 2000);
-// });
+externalInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    sendChat();
+  }
+});
