@@ -29,23 +29,31 @@ let replies = [
 ];
 
 // get the DOM elements
-let externalInput = document.querySelector("#external-message");
+let externalInput = document.querySelector("#external-input");
 let messageText = document.querySelector(".message-text");
 const sendButton = document.querySelector(".send-btn");
+const chatTemplate = document.createElement("div");
+const chatBody = document.querySelector(".chat-body");
+let sender;
 
 function randomReply() {
+  sender = "CodeWomen";
   const randomIndex = Math.floor(Math.random() * replies.length);
   const randomMessage = replies[randomIndex];
-  return randomMessage;
+  chatTemplate.innerHTML = `
+    <div class="left-message">
+      <div class="sender">
+        <img class="dev-logo" src="./images/codeWomen.png" alt="CodeWomen">
+        <p class="sender-name">CodeWomen</p>
+      </div>
+      <div class="message-text">${randomMessage}</div>
+  </div>`;
 }
 
 function sendChat() {
   console.log("Sent", externalInput.value);
-
-  let sender;
-  const chatTemplate = document.createElement("div");
-
-  if (sender === "WomenDev") {
+  if (externalInput) {
+    sender = "WomenDev";
     chatTemplate.innerHTML = `
     <div class="right-message">
       <div class="sender">
@@ -54,28 +62,23 @@ function sendChat() {
       </div>
       <div class="message-text">${externalInput.value}</div>
     </div>`;
-    sender = "CodeWomen";
   }
+  setTimeout(console.log("whatever"), 2000);
+  randomReply();
 
-  if (sender === "CodeWomen") {
-    chatTemplate.innerHTML = `
-    <div class="left-message">
-      <div class="sender">
-        <img class="dev-logo" src="./images/codeWomen.png" alt="CodeWomen">
-        <p class="sender-name">CodeWomen</p>
-      </div>
-      <div class="message-text">${randomMessage}</div>
-  </div>`;
-    sender = "WomanDev";
-  }
+  const newMessage = chatTemplate.children[0];
+  chatBody.append(newMessage);
+
+  // clear text in input field
+  externalInput.value = "";
 }
 
-sendButton.addEventListener("click", sendChat());
+sendButton.addEventListener("click", function () {
+  sendChat();
+});
 
-externalInput.addEventListener("keypress", function(event) {
+externalInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     sendChat();
   }
-
-// clear text in input field
-document.querySelector("#external-message").innerHTML = ""
+});

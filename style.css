@@ -45,7 +45,7 @@ body {
   height: 30px;
   width: auto;
   margin: 5px;
-  /* border: 1px solid green; */
+  /* border: 1px solid red; */
 }
 
 .dev-logo {
@@ -53,7 +53,7 @@ body {
   /* border: 1px solid green; */
 }
 
-.second-message {
+.next-message {
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -76,7 +76,7 @@ body {
   margin-top: 100px;
 }
 
-#external-message {
+#external-input {
   width: 100%;
   min-height: 45px;
   margin-left: 15px;
