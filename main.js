@@ -51,10 +51,11 @@ function randomReply() {
   </div>`;
     const newMessage = chatTemplate.children[0];
     chatBody.append(newMessage);
-    // chatBody.scrollTop = chatBody.scrollHeight;
+    
+    // make sure bottom messages and input field remain visible
+    newMessage.scrollIntoView();
   }
 }
-
 
 function sendChat() {
   console.log("Sent", externalInput.value);
@@ -73,22 +74,15 @@ function sendChat() {
 
     const newMessage = chatTemplate.children[0];
     chatBody.append(newMessage);
-    // chatBody.scrollTop = chatBody.scrollHeight;
+    // make sure bottom messages and input field remain visible
+    newMessage.scrollIntoView();
 
     // clear text in input field
-    externalInput.value = ""
+    externalInput.value = "";
   }
   // the random reply comes after 3 seconds, to imitate that someone is writing
   setTimeout(randomReply, 3000);
 }
-
-// function showChatTyping() {
-//   if (i < txt.length) {
-//     document.getElementById("demo").innerHTML += txt.charAt(i);
-//     i++;
-//     setTimeout(showChatTyping, speed);
-//   }
-// }
 
 sendButton.addEventListener("click", function () {
   sendChat();

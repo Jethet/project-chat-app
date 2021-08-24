@@ -81,6 +81,10 @@ body {
 }
 
 /* FOOTER */
+.footer {
+  bottom: 10px;
+}
+
 .message-input {
   display: flex;
   flex-direction: row;
