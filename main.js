@@ -71,7 +71,17 @@ let replies = [
   "I hope I have not offended you",
   "Humans have such weird ideas",
   "It sounds logical to me",
-  "I can relate to that"
+  "I can relate to that",
+  "I like eggs",
+  "The computer says 'no'",
+  "I love old-fashioned telephone calls",
+  "Personal contact has some advantages",
+  "What did you have for lunch?",
+  "Do you like that?",
+  "Ehm, that's a bit unexpected",
+  "I was not counting on that",
+  "Can I get your input on this?",
+  "I love our little chat, it's so refreshing"
 ];
 
 // get the DOM elements
