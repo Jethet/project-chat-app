@@ -36,7 +36,19 @@ const chatTemplate = document.createElement("div");
 const chatBody = document.querySelector(".chat-body");
 let sender;
 
+// show/hide typing animation
+function show(){
+  document.getElementById("spinner-back").classList.add("show");
+  document.getElementById("spinner-front").classList.add("show");
+}
+
+function hide(){
+  document.getElementById("spinner-back").classList.remove("show");
+  document.getElementById("spinner-front").classList.remove("show");
+}
+
 function randomReply() {
+  hide()
   sender = "CodeWomen";
   const randomIndex = Math.floor(Math.random() * replies.length);
   const randomMessage = replies[randomIndex];
@@ -51,7 +63,7 @@ function randomReply() {
   </div>`;
     const newMessage = chatTemplate.children[0];
     chatBody.append(newMessage);
-    
+
     // make sure bottom messages and input field remain visible
     newMessage.scrollIntoView();
   }
@@ -81,6 +93,7 @@ function sendChat() {
     externalInput.value = "";
   }
   // the random reply comes after 3 seconds, to imitate that someone is writing
+  show()
   setTimeout(randomReply, 3000);
 }
 
