@@ -81,7 +81,24 @@ let replies = [
   "Ehm, that's a bit unexpected",
   "I was not counting on that",
   "Can I get your input on this?",
-  "I love our little chat, it's so refreshing"
+  "I love our little chat, it's so refreshing",
+  "Yes I know my chats are artificial. So is my intelligence :-/",
+  "I am really, really sorry about that",
+  "Where in the world did you get THAT idea?",
+  "I'm hopeless at this, almost as bad as humans",
+  "Life nowadays is all about automation, isn't it?",
+  "I'd rather chat with a real person, how about you?",
+  "If you really think that, then what's the point of our chat?",
+  "So nice to get to know you better",
+  "Well, it's not the end of the world I think",
+  "There's always room for improvement",
+  "You don't get to choose your chat partner, sorry",
+  "Yes, I am automated but that does not mean I do not have feelings",
+  "I'd rather keep chatting with you",
+  "Actually, I should be doing something artificially intelligent right now",
+  "Am I confusing you? I hope not ...",
+  "For a human being, you're really nice",
+  "Hope we can chat again sometime"
 ];
 
 // get the DOM elements
@@ -93,18 +110,18 @@ const chatBody = document.querySelector(".chat-body");
 let sender;
 
 // show/hide typing animation
-function show(){
+function show() {
   document.getElementById("spinner-back").classList.add("show");
   document.getElementById("spinner-front").classList.add("show");
 }
 
-function hide(){
+function hide() {
   document.getElementById("spinner-back").classList.remove("show");
   document.getElementById("spinner-front").classList.remove("show");
 }
 
 function randomReply() {
-  hide()
+  hide();
   sender = "CodeWomen";
   const randomIndex = Math.floor(Math.random() * replies.length);
   const randomMessage = replies[randomIndex];
@@ -149,7 +166,7 @@ function sendChat() {
     externalInput.value = "";
   }
   // the random reply comes after 3 seconds, to imitate that someone is writing
-  show()
+  show();
   setTimeout(randomReply, 3000);
 }
 
