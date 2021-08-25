@@ -26,7 +26,15 @@ let replies = [
   "Whatever you say",
   "I'd like to hear more about that",
   "Mm-mm, so what are you saying?",
-  "No, it's to the power of 2"
+  "No, it's to the power of 2",
+  "I don't think you get it, do you?",
+  "Well, I am usually very polite",
+  "What do you mean exactly?",
+  "Seems like you are getting excited ...",
+  "Let's cross that bridge when we get there",
+  "You don't want to put all your eggs in one basket",
+  "Well, that will not butter my parsnips",
+  "What do you mean, this is nonsense??"
 ];
 
 // get the DOM elements
