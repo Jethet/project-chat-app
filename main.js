@@ -26,6 +26,7 @@ let replies = [
   "Whatever you say",
   "I'd like to hear more about that",
   "Mm-mm, so what are you saying?",
+  "No, it's to the power of 2"
 ];
 
 // get the DOM elements
