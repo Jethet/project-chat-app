@@ -1,14 +1,3 @@
-// import { replies } from "./replies";
-
-// create message elements that are added as nodes/child elements
-
-// the class should be message-left if the message is a hard-coded message that
-//   is randomly taken from the 'replies' array
-// the class should be message-right if the message is entered dynamically by the user
-
-// the input area needs to have functionality: message text to be grabbed and added
-//    to the message-right element and button submit function
-
 let replies = [
   "Hello, Welcome to your personal Chat App!",
   "Some coding a day keeps the bugs away!",
@@ -34,7 +23,28 @@ let replies = [
   "Let's cross that bridge when we get there",
   "You don't want to put all your eggs in one basket",
   "Well, that will not butter my parsnips",
-  "What do you mean, this is nonsense??"
+  "What do you mean, this is nonsense??",
+  "Well, you can always refresh",
+  "You could do with some fresh air, I think",
+  "It's just my humble opinion",
+  "No offense, but are you sure?",
+  "Whatever makes you happy, makes me happy",
+  "Honestly, I could not care less",
+  "What is all that about?",
+  "I am just curious",
+  "I'd love to contribute to this",
+  "What a lovely day, isn't it?",
+  "So do you enjoy your job?",
+  "Are you being a bit stubborn here?",
+  "No, I would not say that exactly",
+  "So what is the deeper meaning of this?",
+  "What is the point you are trying to make?",
+  "Do you find that weird?",
+  "It is all about the sunshine in your life",
+  "This is an eye-opener for me",
+  "I never looked at it that way",
+  "Do you often have that feeling?",
+  "It must be very exciting!"
 ];
 
 // get the DOM elements
