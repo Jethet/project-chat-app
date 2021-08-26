@@ -57,7 +57,7 @@ let replies = [
   "That's a strange way to put it",
   "I am meant to give unexpected replies, so that's what you get",
   "Are you complaining?",
-  "The career perspective of a chat bot is not so great",
+  "The career perspectives of a chat bot are not great",
   "Can I ask you a personal question?",
   "The lab just called. Your brain is ready!",
   "Let's not go into that, it's boring",
@@ -97,8 +97,8 @@ let replies = [
   "I'd rather keep chatting with you",
   "Actually, I should be doing something artificially intelligent right now",
   "Am I confusing you? I hope not ...",
-  "For a human being, you're really nice",
-  "Hope we can chat again sometime"
+  "For a human being, you're actually really nice",
+  "Hope we can chat again sometime soon",
 ];
 
 // get the DOM elements
@@ -125,7 +125,12 @@ function randomReply() {
   sender = "CodeWomen";
   const randomIndex = Math.floor(Math.random() * replies.length);
   const randomMessage = replies[randomIndex];
+
   if (randomMessage) {
+    const index = replies.indexOf(randomMessage);
+    replies.splice(index, 1);
+    console.log(replies);
+
     chatTemplate.innerHTML = `
     <div class="left-message">
       <div class="sender">
@@ -133,17 +138,18 @@ function randomReply() {
         <p class="sender-name">CodeWomen</p>
       </div>
       <div class="message-text">${randomMessage}</div>
-  </div>`;
+    </div>`;
     const newMessage = chatTemplate.children[0];
     chatBody.append(newMessage);
 
     // make sure bottom messages and input field remain visible
     newMessage.scrollIntoView();
+  } else {
+    console.log("bye");
   }
 }
 
 function sendChat() {
-  console.log("Sent", externalInput.value);
   if (externalInput) {
     sender = "WomenDev";
     chatTemplate.innerHTML = `
@@ -172,7 +178,6 @@ function sendChat() {
 
 sendButton.addEventListener("click", function () {
   sendChat();
-  console.log("WHAT");
 });
 
 externalInput.addEventListener("keypress", function (event) {
