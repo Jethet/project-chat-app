@@ -29,19 +29,16 @@ body {
   align-self: center;
   font-size: 16px;
   font-weight: bold;
-  /* border: 1px solid red; */
 }
 
 .sender {
   display: flex;
-  /* border: 1px solid blue; */
 }
 
 .cw-logo {
   height: 35px;
   width: auto;
   margin: 5px;
-  /* border: 1px solid red; */
 }
 
 .dev-logo {
@@ -102,7 +99,6 @@ body {
   margin-bottom: 7px;
   border: 2px solid aquamarine;
   border-radius: 10px;
-  /* border: 1px solid red; */
 }
 
 .right-message {

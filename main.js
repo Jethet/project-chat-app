@@ -129,7 +129,6 @@ function randomReply() {
   if (randomMessage) {
     const index = replies.indexOf(randomMessage);
     replies.splice(index, 1);
-    console.log(replies);
 
     chatTemplate.innerHTML = `
     <div class="left-message">
