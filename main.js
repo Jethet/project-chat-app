@@ -1,4 +1,4 @@
-let replies = [
+const replies = [
   "Do you like your Unexpected Chat App?",
   "Some coding a day keeps the bugs away!",
   "Thank you for our chat. Talk to you soon!",
