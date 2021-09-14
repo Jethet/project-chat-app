@@ -68,7 +68,7 @@ const replies = [
   "I'd like you to give your honest opinion",
   "No need to rush me, I am doing my job",
   "I hope I have not offended you",
-  "Humans have such weird ideas",
+  "Humans have such weird ideas 🤓",
   "It sounds logical to me",
   "I can relate to that",
   "I like eggs",
