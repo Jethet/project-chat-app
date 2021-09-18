@@ -1,11 +1,9 @@
-## Code for the project Chat App
+## Project The Unexpected Chat
 
-This is a private repo because we want our students to write the code themselves as much as possible. Only the coaches have access to private repos in this GitHub organisation.
+This app is built for mobile, with HTML, CSS and vanilla JavaScript. Its goal is to stimulate conversation.
 
-The Chat App project has three levels of difficulty: 
-* advanced (challenge: build the app with hard-coded responses for one side, and dynamic messages that are input by user, and show this on the screen)
-* graduates (challenge: deploy app using Heroku or Netlify)
+When you are bored and need someone (something?) to talk to, you can chat for hours.
 
-This repo provides the code for the app.
+The app is deployed on Netlify: [*The Unexpected Chat*](https://jethet-unexpected-chat.netlify.app/) 
 
-Suggestions are always welcome (henriette@migracode.org). 
+
