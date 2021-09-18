@@ -2,11 +2,10 @@ import replies from "./replies.js"
 
 // get the DOM elements
 let externalInput = document.querySelector("#external-input");
-let messageText = document.querySelector(".message-text");
 const sendButton = document.querySelector(".send-btn");
 const chatTemplate = document.createElement("div");
 const chatBody = document.querySelector(".chat-body");
-let sender;
+let text
 
 // show/hide typing animation
 function show() {
@@ -21,10 +20,10 @@ function hide() {
 
 function randomReply() {
   hide();
-  sender = "CodeWomen";
+  // sender = "CodeWomen";
   const randomIndex = Math.floor(Math.random() * replies.length);
   const randomMessage = replies[randomIndex];
-
+  
   if (randomMessage) {
     const index = replies.indexOf(randomMessage);
     replies.splice(index, 1);
@@ -37,6 +36,7 @@ function randomReply() {
       </div>
       <div class="message-text">${randomMessage}</div>
     </div>`;
+    
     const newMessage = chatTemplate.children[0];
     chatBody.append(newMessage);
 
@@ -45,11 +45,24 @@ function randomReply() {
   } else {
     console.log("bye");
   }
+  return randomMessage
 }
+
+// function typeWriter(randomMessage) {
+//   let i = 0
+//   let speed = 50
+//   if (i < randomMessage.length) {
+//     randomMessage += randomMessage.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+//   console.log(text);
+  
+// }
 
 function sendChat() {
   if (externalInput) {
-    sender = "WomenDev";
+    // sender = "WomenDev";
     chatTemplate.innerHTML = `
     <div class="right-message">
       <div class="message-content">
@@ -72,6 +85,7 @@ function sendChat() {
   // the random reply comes after 3 seconds, to imitate that someone is writing
   show();
   setTimeout(randomReply, 3000);
+  // typeWriter()
 }
 
 sendButton.addEventListener("click", function () {
