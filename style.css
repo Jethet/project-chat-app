@@ -35,13 +35,13 @@ body {
   display: flex;
 }
 
-.cw-logo {
+.person-a {
   height: 35px;
   width: auto;
   margin: 5px;
 }
 
-.dev-logo {
+.person-b {
   height: 50px;
 }
 

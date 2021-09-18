@@ -32,8 +32,8 @@ function randomReply() {
     chatTemplate.innerHTML = `
     <div class="left-message">
       <div class="sender">
-        <img class="cw-logo" src="./images/codeWomen.png" alt="CodeWomen">
-        <p class="sender-name">CodeWomen</p>
+        <img class="person-a" src="./images/personA.png" alt="Chatbuddy">
+        <p class="sender-name">Your friendly Chatbuddy</p>
       </div>
       <div class="message-text">${randomMessage}</div>
     </div>`;
@@ -54,8 +54,8 @@ function sendChat() {
     <div class="right-message">
       <div class="message-content">
       <div class="sender">
-        <img class="dev-logo" src="./images/woman_dev.png" alt="WomenDev">
-        <p class="sender-name">WomanDev</p>
+        <img class="person-b" src="./images/personB.png" alt="Yourself">
+        <p class="sender-name">You</p>
       </div>
       <div class="message-text">${externalInput.value}</div>
       </div>
